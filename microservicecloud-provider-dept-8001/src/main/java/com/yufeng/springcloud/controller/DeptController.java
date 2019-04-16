@@ -28,7 +28,7 @@ public class DeptController
 		return service.get(id);
 	}
 
-	@RequestMapping(value = "/dept/list", method = RequestMethod.GET)
+	@RequestMapping(value = "/dept/get/list", method = RequestMethod.GET)
 	public List<Dept> list()
 	{
 		return service.list();
