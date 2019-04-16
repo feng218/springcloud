@@ -5,6 +5,7 @@ import com.yufeng.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 
@@ -12,6 +13,7 @@ import java.util.List;
 public class DeptController
 {
 	@Autowired
+    //@Resource(name = "deptServiceImpl")
 	private DeptService service;
 
 	@RequestMapping(value = "/dept/add", method = RequestMethod.POST)
@@ -31,5 +33,4 @@ public class DeptController
 	{
 		return service.list();
 	}
-
 }
