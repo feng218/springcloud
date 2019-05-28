@@ -16,7 +16,8 @@ import java.util.List;
 @RestController
 public class DeptController_Consumer
 {
-    private static final String RETURN_URL_PREFIX = "http://localhost:8001";
+    //private static final String RETURN_URL_PREFIX = "http://localhost:8001";
+    private static final String RETURN_URL_PREFIX = "http://microservicecloud-dept"; //服务提供方的spring.application.name的配置
 
     @Autowired
     private RestTemplate restTemplate;
