@@ -2,6 +2,7 @@ package com.yufeng.springcloud.cfgbeans;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
+import com.yufeng.myrule.CustomeRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,9 +19,9 @@ public class ConfigBean
 		return new RestTemplate();
 	}
 
-	/*@Bean
+	@Bean
 	public IRule myRule()
 	{
-		return new RandomRule();
-	}*/
+		return new CustomeRule();
+	}
 }
