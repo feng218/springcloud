@@ -1,7 +1,7 @@
 package com.yufeng.springcloud.controller;
 
 import com.yufeng.springcloud.entities.Dept;
-import com.yufeng.springcloud.service.FeignConsumerService;
+import com.yufeng.springcloud.service.DeptClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,18 +17,17 @@ import java.util.List;
 public class DeptController
 {
     @Autowired
-    private FeignConsumerService feignConsumerService;
+    private DeptClientService deptClientService;
 
     @RequestMapping(value = "/consumer/dept/get/{id}", method = RequestMethod.GET)
     public Dept get(@PathVariable("id") Long id)
     {
-        return feignConsumerService.get(id);
+        return deptClientService.get(id);
     }
 
     @RequestMapping(value = "/consumer/dept/get/list", method = RequestMethod.GET)
     public List<Dept> list()
     {
-        return feignConsumerService.list();
+        return deptClientService.list();
     }
-
 }

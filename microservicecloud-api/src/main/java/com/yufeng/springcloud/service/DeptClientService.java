@@ -13,7 +13,7 @@ import java.util.List;
  * Created by Administrator on 2019/6/11.
  */
 @FeignClient(value = "microservicecloud-dept")
-public interface FeignConsumerService
+public interface DeptClientService
 {
     @RequestMapping(value = "/dept/add", method = RequestMethod.POST)
     public boolean add(@RequestBody Dept dept);
