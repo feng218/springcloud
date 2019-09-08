@@ -1,6 +1,11 @@
 server:
   port: 80
 
+# 开启Hystrix
+feign:
+  hystrix:
+    enabled: true
+
 # eureka 客户端配置
 eureka:
   client:
