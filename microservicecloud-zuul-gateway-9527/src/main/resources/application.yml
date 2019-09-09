@@ -16,6 +16,7 @@ eureka:
 
 # 路由映射
 zuul:
+  ignored-services: microservicecloud-dept
   routes:
     mydept:
       serviceId: microservicecloud-dept
