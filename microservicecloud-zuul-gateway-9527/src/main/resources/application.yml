@@ -16,12 +16,12 @@ eureka:
 
 # 路由映射
 zuul:
+  prefix: /yufeng
   ignored-services: "*"
   routes:
     mydept:
       serviceId: microservicecloud-dept
       path: /mydept/**
-
 
 info:
   app.name: yufeng-microcloud
